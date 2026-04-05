@@ -327,6 +327,17 @@ app.delete('/api/tasks/:id', requireAuth, async (req, res) => {
     }
 });
 
+// New endpoint for auto-deploy
+app.get('/api/info', (req, res) => {
+    res.json({
+        name: 'Task Management API',
+        version: '1.0.0',
+        environment: process.env.NODE_ENV,
+        timestamp: new Date().toISOString(),
+        message: 'This endpoint confirms auto-deploy works!'
+    });
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
     console.error('Unhandled error:', err);

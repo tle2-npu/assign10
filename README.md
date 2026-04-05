@@ -108,3 +108,5 @@ This API is ready to deploy to cloud platforms like Render. Make sure to:
 1. Set appropriate environment variables
 2. Use a secure JWT secret in production
 3. Consider database limitations with SQLite
+
+Deployed API - The production API is available at: [https://assign10.onrender.com](https://assign10.onrender.com) 
